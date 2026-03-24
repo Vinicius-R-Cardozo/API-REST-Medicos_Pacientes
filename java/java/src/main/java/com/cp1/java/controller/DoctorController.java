@@ -51,7 +51,7 @@ public class DoctorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<DoctorModels> updateMovie(@PathVariable Long id, @RequestBody DoctorModels newDoctor){
+    public ResponseEntity<DoctorModels> updateDoctor(@PathVariable Long id, @RequestBody DoctorModels newDoctor){
         DoctorModels doctorModels = doctorService.updateDoctor(id, newDoctor);
         return ResponseEntity.ok(doctorModels);
     }
